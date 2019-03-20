@@ -3,13 +3,13 @@ Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Yunpu Zhang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 # -----------------------------------------------------------------------------
-# TODO: 2. Right-click on the  src  folder and
+# DONE: 2. Right-click on the  src  folder and
 #              Mark Directory as ... Sources Root,
 #          if you have not already done so.
 # -----------------------------------------------------------------------------
@@ -81,6 +81,21 @@ def run_test_problem1():
 
 
 def problem1(circle, rectangle, color, length, window):
+    circle.attach_to(window)
+    rectangle.attach_to(window)
+    start=circle.center
+    end=rectangle.get_center()
+    line=rg.Line(start,end)
+    line.color=color
+    line.thickness=circle.outline_thickness
+    line.attach_to(window)
+    start2=rg.Point(line.get_midpoint().x,line.get_midpoint().y-(1/2)*length)
+    end2=rg.Point(line.get_midpoint().x,line.get_midpoint().y+(1/2)*length)
+    line1=rg.Line(start2,end2)
+    line1.color=circle.fill_color
+    line1.thickness=circle.outline_thickness+rectangle.outline_thickness
+    line1.attach_to(window)
+    window.render()
     """
     See   problem1_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -118,7 +133,7 @@ def problem1(circle, rectangle, color, length, window):
       :type window:    rg.RoseWindow
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # DONE: 3. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
 
