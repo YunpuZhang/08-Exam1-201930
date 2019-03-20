@@ -3,8 +3,8 @@ Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Yunpu Zhang.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -12,10 +12,48 @@ def main():
     test_factor_sum()
 
 
+
 def test_factor_sum():
+    #Test1
+    expected = 1
+    actual = factor_sum(1)
+    print('Test1')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test2
+    expected = 3
+    actual = factor_sum(2)
+    print('Test2')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test3
+    expected = 4
+    actual = factor_sum(3)
+    print('Test3')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test4
+    expected = 6
+    actual = factor_sum(5)
+    print('Test4')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+    # Test5
+    expected = 8
+    actual = factor_sum(7)
+    print('Test5')
+    print('Expected:', expected)
+    print('Actual:  ', actual)
+
+
+
     """ Tests the   factor_sum   function. """
     ###########################################################################
-    #  TODO: 2. Implement this TEST function, as follows:
+    #  DONE: 2. Implement this TEST function, as follows:
     #
     #    1. Read the  doc-string of the   factor_sum   function defined below.
     #
@@ -78,3 +116,4 @@ def factor_sum(n):
     ###########################################################################
     # DO NOT modify the above line of code!
     ###########################################################################
+main()
